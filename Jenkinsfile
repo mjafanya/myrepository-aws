@@ -6,6 +6,9 @@ pipeline{
   parameters{
     choice choices: ['dev','sit','pt','prod'], name: 'ENV'
   }
+  parameters {
+  choice choices: ['v1', 'v2', 'v3', 'v4'], name: 'version'
+}
   stages{
    stage('welcome note'){
     steps{
