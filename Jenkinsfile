@@ -20,6 +20,7 @@ pipeline{
       println "MY BUILD NO IS ${BUILD_NUMBER}"
       println "MY java home path is ${env.JAVA_HOME}"
       println "my env values is ${params.ENV}"
+      println "my version is ${params.version}
       }
      }
     }
