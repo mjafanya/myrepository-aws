@@ -7,7 +7,7 @@ pipeline{
     choice choices: ['dev','sit','pt','prod'], name: 'ENV'
   }
   parameters {
-  choice choices: ['v1', 'v2', 'v3', 'v4'], name: 'version'
+  choice choices: ['v1', 'v2', 'v3', 'v4'], name: 'VERSION'
 }
   stages{
    stage('welcome note'){
@@ -20,7 +20,7 @@ pipeline{
       println "MY BUILD NO IS ${BUILD_NUMBER}"
       println "MY java home path is ${env.JAVA_HOME}"
       println "my env values is ${params.ENV}"
-      println "my version is ${params.version}
+      println "my version is ${params.VERSION}"
       }
      }
     }
