@@ -6,7 +6,7 @@ pipeline{
     script{
         a=10 
         b=20
-        if (a>b){
+        if (a > b) {
             println "a is greater then b value is ${a}"
         }
         else {
@@ -20,7 +20,7 @@ pipeline{
             println "my element values is ${element}"
         }
         k=1
-        while (k<=0){
+        while (k <=0) {
             println "k value is ${k}"
             k=k+1
         }
