@@ -24,8 +24,8 @@ pipeline{
             println "k value is ${k}"
             k=k+1
         }
-        File file = new File ("/tmp/testdata.txt")
-          for(line in file.readlines()){
+        File file = new File("/tmp/testdata.txt")
+          for(line in file.readLines()){
             println "your lines is ${line}"
            }     
        }
