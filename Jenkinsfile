@@ -1,5 +1,8 @@
 pipeline{
-  agent any 
+  agent any
+  parameters{
+    choice choices: ['dev','sit','pt','prod'], name: 'ENV'
+  }
   stages{
    stage('working with conditions'){
     steps{
@@ -19,15 +22,21 @@ pipeline{
         for(element in lisl){
             println "my element values is ${element}"
         }
-        k=1
-        while (k <=0) {
+       stage('working with file opterations'){
+        steps{
+            script{
+                File file = new File("/tmp/testdata.txt")
+                for(line in file.readLines()){
+                    println "your lines is ${line}"
+                }
+         k=1
+        while (k<=0){
             println "k value is ${k}"
             k=k+1
+            }
+            }
         }
-        File file = new File("/tmp/testdata.txt")
-          for(line in file.readLines()){
-            println "your lines is ${line}"
-           }     
+    }     
        }
      }
     }
