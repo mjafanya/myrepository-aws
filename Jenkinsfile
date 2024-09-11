@@ -1,25 +1,29 @@
 pipeline{
   agent any 
-  environment {
-    JAVA_HOME = "/usr/bin/java"
-  }
-  parameters{
-    choice choices: ['dev','sit','pt','prod'], name: 'ENV'
-  }
   stages{
-   stage('welcome note'){
+   stage('working with conditions'){
     steps{
     script{
-      subject="jenkinspac"
-      println "Value of subject is ${subject}"
-      println "Welcome to jenkins pipeline scripting"
-      println "my workspace is ${WORKSPACE}"
-      println "MY BUILD NO IS ${BUILD_NUMBER}"
-      println "MY java home path is ${env.JAVA_HOME}"
-      println "my env values is ${params.ENV}"
-      println "my version is ${params.VERSION}"
-      }
+        a=10 
+        b=20
+        if (a>b){
+            println "a is greater then b value is ${b}"
+        else
+            println "b is greater then a value is ${a}"
+        }
+        for (i=1;i<=10;i++){
+            println "my value of i is ${i}"
+        }
+        lisl=[20,30,40,50]
+        for(element in lisl){
+            println "my element values is ${element}"
+        }
+        k=1
+        while (k<=0){
+            println "k value is ${k}"
+        }
      }
     }
+   }
   }
 }
