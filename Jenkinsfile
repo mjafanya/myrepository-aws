@@ -24,6 +24,16 @@ pipeline{
             println "k value is ${k}"
             k=k+1
         }
+      stage('working with file opterations'){
+        steps{
+            script{
+                File file = new File ("/tmp/testdata.txt")
+                for(line in file.readlines()){
+                    println "your lines is ${line}"
+                }
+            }
+        }
+    }
      }
     }
    }
