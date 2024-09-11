@@ -8,7 +8,8 @@ pipeline{
         b=20
         if (a>b){
             println "a is greater then b value is ${b}"
-        else
+        }
+        else {
             println "b is greater then a value is ${a}"
         }
         for (i=1;i<=10;i++){
