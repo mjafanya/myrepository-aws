@@ -22,9 +22,6 @@ pipeline{
         for(element in lisl){
             println "my element values is ${element}"
         }
-       stage('working with file opterations'){
-        steps{
-            script{
                 File file = new File("/tmp/testdata.txt")
                 for(line in file.readLines()){
                     println "your lines is ${line}"
@@ -33,10 +30,7 @@ pipeline{
         while (k<=0){
             println "k value is ${k}"
             k=k+1
-            }
-            }
-        }
-    }     
+            } 
        }
      }
     }
