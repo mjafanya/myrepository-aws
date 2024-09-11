@@ -22,6 +22,7 @@ pipeline{
         k=1
         while (k<=0){
             println "k value is ${k}"
+            k=k+1
         }
      }
     }
